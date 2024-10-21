@@ -51,14 +51,6 @@ def obsession():
         current_situation = 'obsess'
         return {"situation": effort_noise() + "Still Nothing...Crap! continue Y / N ?§->"}
 
-def sleeping():
-    global current_situation
-    if dice_throw(55):
-        current_situation = 'nap success'
-        return {"situation": situations["sleep_txt"] + situations[current_situation]}
-    else:
-        current_situation = 'start'
-        return {"situation": situations["sleep_txt"] + situations["start"]}
 
 # Define other game actions like cursing, slap, hammer, explain similarly...
 
@@ -121,35 +113,52 @@ async def process_command(request: Request):
         return {"situation": situations['abandon']}
     
     elif command == "sleep":
-        current_situation = 'sleep'
         profile_smart += 1
-        return sleeping()
+        if dice_throw(55):
+            current_situation = 'nap_success'
+            return {"situation": situations["sleep_txt"] + situations[current_situation]}
+        else:
+            current_situation = 'start'
+            return {"situation": situations["sleep_txt"] + situations["start"]}
     
     elif command == "friend":
-        current_situation = 'start_next_day'
         profile_dependent += 1
-        return {"situation": situations['call_friend'] + situations['start_next_day']}
+        if dice_throw(20):
+            current_situation = 'call_friend_not'
+            return {"situation": situations['call_friend_not']}
+        else:
+            current_situation = 'start_next_day'
+            return {"situation": situations['call_friend'] + situations['start_next_day']}
     
     elif command == "colleague":
-        current_situation = 'start_next_day'
         profile_dependent += 1
-        return {"situation": situations['call_colleague'] + situations['start_next_day']}
+        if dice_throw(20):
+            current_situation = 'call_colleague_not'
+            return {"situation": situations['call_colleague_not']}
+        else:
+            current_situation = 'start_next_day'
+            return {"situation": situations['call_colleague'] + situations['start_next_day']}
 
     elif command == "chatgpt":
-            current_situation = 'chatgpt'
-            profile_dependent += 2
-            input("(Press <enter> and may the omnipotent A.I. one day rule the World!)")
-            print("")
-            input("Oops, weird answer. Let's formulate that query more adequately...")
-            print("")
-            print(situations['chatgpt'])
-    elif command == "sleep":
-            current_situation = 'sleep'
-            profile_smart += 1
-            print(situations['sleep'])
-            print("")
-            input('Press <enter> to wake up')
-            sleeping()
+        current_situation = 'chatgpt'
+        profile_dependent += 2
+        if dice_throw(15):
+            current_situation = 'chatgpt_not'
+            return {"situation": situations['chatgpt_not']}
+        else:
+            return {"situation": situations['chatgpt']}
+        
+    elif command == "explain":
+        profile_smart += 1
+        if dice_throw(40):
+            current_situation = 'duck success'
+            return {"situation": situations['duck_explain_txt'] + situations['duck success']}
+        else:
+            current_situation = 'duck_explain_no'
+            return {"situation": situations['duck_explain_txt'] + situations['duck_explain_no']}
+
+
+
     elif command == "scream":
             profile_angry += 0.5
             input("(Press <enter> to scream into that pillow and cry it out a little...)")
@@ -178,13 +187,7 @@ async def process_command(request: Request):
             input("You grab the hammer with both hands and hit as hard as you can...<enter>")
             input("KAAABOUUUUUMMMMM, KRRAAAKKK, Schling schlingg...")
             hammer()
-    elif command == "explain":
-            profile_smart += 1
-            current_situation = 'duck'
-            input("You confess to the rubber duck...<enter>")
-            input("He seems rather perplexed...")
-            print("")
-            explain()
+
     elif command == "chocolate":
             profile_zen += 1
             current_situation = 'kitchen'
