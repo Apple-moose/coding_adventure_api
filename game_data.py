@@ -1,5 +1,6 @@
 situations = {
     "start": "So, here you are again, laptop in hands. You start to WRITE CODE§->",
+    "start_next_day": "§§The next day...§$So, here you are again, laptop in hands. You start to WRITE CODE§->",
     "first options": "You gather your focus and put your mind at work with confidence. §Right away, your flow gets interrrupted by this damn 'meanError' again§\
 ...What would you do? §Turn to GOOGLE (STACK overflow, or CHATGPT?), talk to the DUCK or walk to the KITCHEN? §(you can always call a FRIEND for a quick fix)§->",
     "stack overflow": "You end up scrolling again on Stack Overflow, your most trusted friend on the web. §There are tons of solutions \
@@ -26,14 +27,16 @@ digestion purposes? §(or BACK to work.... Really??)§->",
     "after break": "Ouh, time passes so fast when your checking for new shoes on amazon! §Fine, let's go BACK to coding, \
 but not before you pass by the W.C., check your hair and your teeth in the mirror, put on a warm shirt, make yourself \
 another TEA, and/or grab some more CHOCOLATE...§->",
-    "colleague": "Your self esteem takes a hit as you push through the: §'Pffffff', 'yeah, yeah' and 'I'm too busy right now'...§ \
+    "call_colleague": "Your self esteem takes a hit as you push through the: §'Pffffff', 'yeah, yeah' and 'I'm too busy right now'...§ \
 Anyways, you end up sending your problematic code and getting a gitHub get request from your favorite colleague. \
-§Smart move buddy, you congratulate yourself for not wasting time and/or not learning much...§->",
-    "friend": "After a couple of calls, someone from the inner circle picks up and laughs at you a little.§ \
+§Smart move buddy, you congratulate yourself for not wasting time and/or not learning much...§\
+§(Press <key> to swallow some of your coder's pride...)$",
+    "call_friend": "After a couple of calls, someone from the inner circle picks up and laughs at you a little.§ \
 You do your best to explain the matter at hand...and your friend gets half of it. §During the exchange, he refers you to an obscure webChat \
 where some similar issues are being discussed. §You thank your friend for nothing and start pasting every line of code \
 from the forum until one of them sticks! §Lucky for you, those coders are geniuses and the meanError seems to have disappeared...for the moment. \
-§Hallelujah!! §You praise the coding community and swear to your future self that you will one day take the time to understand that pasted code...§->",
+§Hallelujah!! §You praise the coding community and swear to your future self that you will one day take the time to understand that pasted code...§\
+§§Press <key> to celebrate and do a little dance...$§",
     "chatgpt": "After a couple of tweeking in the prompt, the Truth appears before your eyes: §Pure Code, so perfect: \
 devoid of unuseful console loggings, full of //#Comments and generic variable names. §The code is undoubtedly clean and, once pasted, runs smooth like butter. \
 §Honestly, what kind of person would disrupt that super-natural flow of artificial beings helping each other so efficiently? \
@@ -95,11 +98,13 @@ and adequate. §TODO: Celebrate fully and check updates on your coder's PROFILE 
 }
  
 solutions = {
-    "start": {"write code": "first options", "code": "first options", "study": "study"},
-    "first options": {"google": "stack overflow", "stack overflow": "stack overflow", "stack": "stack overflow", "duck": "duck", "kitchen": "kitchen", "friend": "friend"},
-    "stack overflow": {"frustration": "frustration", "investigate": "study", "study": "study", "friend": "friend", "colleague": "colleague", "chatgpt": "chatgpt"},
+    "start": {"write code": "first options", "code": "first options"},
+    "start_next_day": {"write code": "first options", "code": "first options"},
+    "first options": {"google": "stack overflow", "stack overflow": "stack overflow", "stack": "stack overflow", "duck": "duck", "kitchen": "kitchen"},
+    "stack overflow": {"frustration": "frustration", "investigate": "study", "study": "study"},
     "study": {"obsess": "obsess", "frustration": "frustration"},
-    "friend": {"start": "start"},
+    # "call_friend": {"start": "start"},
+    # "call_colleague": {"start": "start"},
     "chatgpt": {"code": "start"},
     "frustration": {"autistic": "autism", "back": "first options", "dark": "dark"},
     "dark": {"punch": "punch"},
@@ -107,13 +112,12 @@ solutions = {
     "cursing": {"ok": "first options", "enough": "first options", "better": "start", "write code": "first options"},
     "obsess": {"abandon": "abandon", "start": "start"},
     "abandon": {"start again": "start", "start": "start"},
-    # "sleeping": {"write code": "first options", "code": "first options", "next time": "start", "abandon": "abandon"},
     "pillow": {"code": "first options", "ok": "first options"},
     "f-word": {"write code": "first options"},
     "slap": {"write code": "first options","dark": "dark", "back": "start", "coding": "first options"},
     "punch": {"write code": "first options", "better": "start", "calm down": "first options", "dark": "dark"},
-     "todo": {"rubber ducking": "rubber ducking", "next": "start", "options": "first options", "strangle": "strangle duck", "start": "start", "todo": "todo"},
-     "duck": {"rubber ducking": "rubber ducking", "next": "start", "options": "first options", "strangle": "strangle duck", "start": "start", "todo": "todo"},
+    "todo": {"rubber ducking": "rubber ducking", "next": "start", "options": "first options", "strangle": "strangle duck", "start": "start", "todo": "todo"},
+    "duck": {"rubber ducking": "rubber ducking", "next": "start", "options": "first options", "strangle": "strangle duck", "start": "start", "todo": "todo"},
     "rubber ducking": {"back": "duck"},
     "strangle duck": {"options": "first options", "abandon": "abandon", "dark": "dark"},
     "kitchen": {"back": "first options"},

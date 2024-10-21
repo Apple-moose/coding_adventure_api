@@ -126,24 +126,15 @@ async def process_command(request: Request):
         return sleeping()
     
     elif command == "friend":
-            current_situation = 'call_friend'
-            profile_dependent += 1
-            print(situations['call_friend'])
-            input("(Press <enter> to celebrate and do a little dance...)")
-            print("")
-            current_situation = 'start'
-            input("The next day...")
-            print(situations['start'])
+        current_situation = 'start_next_day'
+        profile_dependent += 1
+        return {"situation": situations['call_friend'] + situations['start_next_day']}
+    
     elif command == "colleague":
-            current_situation = 'call_colleague'
-            profile_dependent += 1
-            print(situations['call_colleague'])
-            print("")
-            input("(Press <enter> to swallow some of your coder's pride...)")
-            print("")
-            current_situation = 'start'
-            input("The next day...")
-            print(situations['start'])
+        current_situation = 'start_next_day'
+        profile_dependent += 1
+        return {"situation": situations['call_colleague'] + situations['start_next_day']}
+
     elif command == "chatgpt":
             current_situation = 'chatgpt'
             profile_dependent += 2
