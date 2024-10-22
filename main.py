@@ -157,70 +157,71 @@ async def process_command(request: Request):
             current_situation = 'duck_explain_no'
             return {"situation": situations['duck_explain_txt'] + situations['duck_explain_no']}
 
-
-
     elif command == "scream":
             profile_angry += 0.5
-            input("(Press <enter> to scream into that pillow and cry it out a little...)")
             current_situation = 'pillow'
-            print(situations['pillow'])
+            return {"situation": situations['pillow']}
+    
     elif command == "f-word":
             profile_angry += 1
-            input("You breathe in all the air your lungs can admit and let out a magnificent angry FUUUUUUUUUUUU@#$% !!!<enter>")
             current_situation = 'cursing'
-            print("")
-            print(situations[current_situation])
+            return {"situation": situations[current_situation]}
+    
     elif command == "fuuu":
-            profile_angry += 2
-            input("(Fffffffff......)")
+        profile_angry += 2
+        if dice_throw(20):
+            current_situation = 'endgame'
+            return {"situation": situations['curse_intro'] + situations['angry endgame']}
+        else:
             current_situation = 'cursing'
-            cursing()
+            return {"situation": situations['curse_intro'] + situations['cursing_success']}
+
+    elif command == "fuck":
+        profile_angry += 2
+        if dice_throw(20):
+            current_situation = 'endgame'
+            return {"situation": situations['curse_intro'] + situations['angry endgame']}
+        else:
+            current_situation = 'cursing'
+            return {"situation": situations['curse_intro'] + situations['cursing_success']}
+        
     elif command == "slap":
-            profile_angry += 1
+        profile_angry += 1
+        if dice_throw(20):
+            current_situation = 'slap endgame'
+            return {"situation": situations['slap_intro'] + situations['slap endgame']}
+        else:
             current_situation = 'slap'
-            input("You raise your hand and hit <enter> the table in frustration...")
-            input("SHHLLPPLAAAAKKK!!!")
-            slap()
+            return {"situation": situations['slap_intro'] + situations['slap_success']}
+
     elif command == "hammer":
-            profile_angry += 3
+        profile_angry += 3
+        if dice_throw(50):
+            current_situation = 'endgame'
+            return {"situation": situations['hammer_intro'] + situations['angry endgame']}
+        else:
             current_situation = 'punch'
-            input("You grab the hammer with both hands and hit as hard as you can...<enter>")
-            input("KAAABOUUUUUMMMMM, KRRAAAKKK, Schling schlingg...")
-            hammer()
+            return {"situation": situations['hammer_intro'] + situations['hammer_success']}
 
     elif command == "chocolate":
             profile_zen += 1
             current_situation = 'kitchen'
-            input('the chocolate <enter>s your watering mouth')
-            print("")
-            print("Mmmmmh, Delicious!")
-            print("")
-            print(situations['tea'])
+            return {"situation": situations['chocolate_intro'] + situations['tea']}
+    
     elif command == "tea":
             profile_zen += 1
             current_situation = 'kitchen'
-            input('You press <enter> on the water boiler...')
-            print("")
-            print(situations['sandwich'])
+            return {"situation": situations['tea_intro'] + situations['sandwich']}
+    
     elif command == "sandwich":
             profile_zen += 2
             current_situation = 'kitchen'
-            input('You insert all those wonderful ingredients between integral slices of bread...')
-            print("")
-            print("Best Sandwich Ever!")
-            print("")
-            print(situations['break'])
+            return {"situation": situations['sandwich_intro'] + situations['break']}
+    
     elif command == "break":
             profile_zen += 2
             current_situation = 'kitchen'
-            input('Press <enter> to pause and check the news on your phone...')
-            print("")
-            print("La la lah...ouh, what's up with that...")
-            print("")
-            print(situations['after break'])    
-    
-    
-        # Handle more commands like friend, colleague, chatgpt, sleep, scream, f-word, slap, hammer, explain...
+            return {"situation": situations['break_intro'] + situations['after break']} 
     
     elif command == "profile":
         return {"situation": profiling()}
@@ -235,7 +236,7 @@ async def process_command(request: Request):
         return {"message": 'Of course... just what I thought!))'}
     
     elif command == "exit":
-        return {"message": 'Thanks and hope to see you again soon!§'}
+        return {"message": 'Thanks and hope to see you again soon!'}
     
     else:
         return {"message": "Say Whaaaat?§->"}

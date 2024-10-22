@@ -15,7 +15,7 @@ to Donald §or don't be a fool and re-consider your OPTIONS?§->",
 problem in spoken or written natural language. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer \
 would carry around a rubber duck and debug their code by forcing themselves to explain it, line by line, to the duck. ] § Now that you know, please reconsider your options by pressing B+A+C+K, in that order with a finger \
 on the keyboard. Then with the same finger or another press <enter>...)§->",
-    "duck_explain_txt": "You confess to the rubber duck...<key>$§He seems rather perplexed...<key>$\
+    "duck_explain_txt": "You confess to the rubber duck...<key>$§He seems rather perplexed...$\
 §",
     "duck success": "Incredible! §Confessional Programming IS an actual working method for debugging and you are now \
 living proof of it. §Going back to the code, you find that hidden bug and make everything running smoothly again. §You feel smart \
@@ -31,19 +31,25 @@ Ah yeah! Donald... §try to EXPLAIN your code again line by line, §reconsider y
 to the kitchen slowly, thinking about what you will find there...§You take the opportunity to drink a bit of water. \
 Your eyes catch a glimmer coming from a box on the counter with a big 'Merci' written on it... §Steal some CHOCOLATE or \
 BACK to work?§->",
-    "tea": "You wipe away all traces of chocolate from the corners of your smile and notice the water boiler. §Now, how about preparing \
+    "chocolate_intro": "the chocolate <enter>s your watering mouth$§'Mmmmmh, Delicious!",
+    "tea": "§You wipe away all traces of chocolate from the corners of your smile and notice the water boiler. §Now, how about preparing \
 yourself a nice cup of TEA? §Maybe eat another piece of CHOCOLATE? §..or BACK to work for some reason...???§->",
+    "tea_intro": "You press <key> on the water boiler...$§",
     "sandwich": "Waiting for the water to boil, you prepare your cup and check the fridge for some cream while you \
 are planning your next move: §going BACK to work...   §Also, you can't help but notice all the necessary ingredients to make yourself \
 your favorite SANDWICH. §Again: 'What's the rush, right? Very tempting. It would sure take your belly out of the equation in your next coding session...§->",
-    "break": "There it is: true pleasure. A Happy brain in a Happy body. What more? §Well, how about a little BREAK for \
+    "sandwich_intro": "You insert all those wonderful ingredients between integral slices of bread...<key>$§Best Sandwich Ever!§",
+    "break": "§There it is: true pleasure. A Happy brain in a Happy body. What more? §Well, how about a little BREAK for \
 digestion purposes? §(or BACK to work.... Really??)§->",
-    "after break": "Ouh, time passes so fast when your checking for new shoes on amazon! §Fine, let's go BACK to coding, \
+    "break_intro": "Press <key> to pause and check the news on your phone...$§La la lah...ouh! What's up with that?...§",
+    "after break": "§Ouh! Time passes so fast when your checking for new shoes on amazon!§§Fine, let's go BACK to coding, \
 but not before you pass by the W.C., check your hair and your teeth in the mirror, put on a warm shirt, make yourself \
 another TEA, and/or grab some more CHOCOLATE...§->",
+    "wc": "Right!§Of course you had to type 'wc'!§Very, very thorough. And that makes you...Very human or are you another AI?§\
+Interesting...I shoud've asked you first!§ Alright, whatever. Back to the KITCHEN or to your CODE issues?§->",
  #FRIEND---COLLEAGUE-------------------------   
     "call_colleague": "Your self esteem takes a hit as you push through the: §'Pffffff', 'yeah, yeah' and 'I'm too busy right now'...§ \
-Anyways, you end up sending your problematic code and later, comes that much needed gitHub get request from a more advanced coder colleague. \
+Anyways, you end up pushing your problematic code and later, comes that much needed gitHub get request from a more advanced coder colleague.§ \
 §Smart move buddy, you congratulate yourself for not wasting time and/or not learning much...§\
 §(Press <key> to swallow some of your coder's pride...)$",
     "call_colleague_not": "Oooops! Not now it seems.§It's been crunch time everyday for a lot of your co-workers lately, and you really get \
@@ -81,20 +87,28 @@ made to work in a mental institution...§but you might become a patient if you l
 the DARK side and express some of that accumulated tension physically?§->",
     "dark": "Something has got to give and various options are rapidly presenting themselves: §you can SCREAM in a pillow, §let a very long and very loud F-WORD out, \
 SLAP something on the desk §or just PUNCH that wall with all you've got...§->",
-    "pillow": "After this mini crisis episode, you go and refresh your face in the bathroom. §Once the mirror-check \
+    "pillow": "(Press <key> to scream into that pillow and cry it out a little...)$§After this mini crisis episode, you go and refresh your face in the bathroom. §Once the mirror-check \
 reflects your normal 'OK' face again, you come back to your post, take a deep breath and start to CODE again...§->",
-    "cursing": "WAouuuuuh that felt good! §Sometimes, cursing is all you've got...for now, you're 'OK' (are you? Let us know if you had ENOUGH?) §but you can't shake the feeling that \
+    "curse_intro": "(Fffffffff......)$§",
+    "cursing": "You breathe in all the air your lungs can admit and let out a magnificent angry FUUUUUUUUUUUU@#% !!!<key>$§WAouuuuuh that felt good! §Sometimes, cursing is all you've got...§\
+For now, you're 'OK' (are you? Let us know if you had ENOUGH?) §Also, you can't shake the feeling that \
 you might have been noticed by someone else, and that, makes you want to curse even more. §Will you risk another very loud 'FUUU' ??§->",
+    "cursing_success": "   !!! FU%**😤§§   FU*^&#**#🤬§§   FUuuuuUUUU*%*@*#^#%🤯   !!!§§Double down with FUUU or feel BETTER now?§->",
     "punch": "You turn to that ugly wall next to the desk and hit it with your right fist. §AOUCH!... §Damn, \
 you have hit precisely where the supporting beam was! §Your hand hurts a little and the wall is somehow mocking you. \
-§What does this experience teach you? §That you need to 'CALM DOWN', §or go the toolbox, get the HAMMER and bring that \
+§What is this unfortunate experience teaching you? §That you need to 'CALM DOWN'? §...or go the toolbox, get the HAMMER and bring that \
 stupid wall down?§->",
+    "hammer_intro": "You grab the hammer with both hands and hit as hard as you can...<key>$§KAAABOUUUUUMMMMM, KRRAAAKKK, Schling schlingg...$§",
+    "hammer_success": "The wall still stands but it's getting weaker. Any moment....§HAMMER further, explore more of the DARK side?§...or are you feeling BETTER by now?§->",
+    "slap_intro": "You raise your hand and hit <key> the table in frustration...$§SHHLLPPLAAAAKKK!!!$§",
+    "slap_success": "...silence...§§Ouf! You just realized that you could have hit some sensitive equipment. \
+(Maybe not do that again?)§SLAP harder, explore more of your DARK side?§ ...Or come BACK to CODING?§->",
     "slap endgame": "OUch!!! §The slapping went uncontrolled and your laptop gets a big hit. §Screen of Death and broken glass, \
-you are also bleeding at the wrist. §What a mess!!! §Seriously?? This couldn't have gone worse. \
-§You are dangerous. §This mini game is booting you out as to avoid further material destruction. §Good luck with your temper issues Pal!",
+you are also bleeding at the wrist. §What a mess!!! §§Seriously?? This couldn't have gone worse. \
+§You just have been labeled 'dangerous' to all synthetic life. §This mini game is booting you out as to avoid further material destruction. §Good luck with your temper issues Pal!@",
     "angry endgame": "With so much noise, someone calls the autorities on you. §You get a serious warning and find yourself in such a state of \
 anger and despair that you are rendered inoperable. §You need to CALM DOWN! Seriously. \
-§This mini game is booting you out as to avoid further material destruction. §Have a nice Life Buddy!",
+§This mini game is booting you out as to avoid further material and/or psychic destruction. §Have a nice Life Buddy!@",
     "autism": "Autism, also called autism spectrum disorder(ASD) or autism spectrum condition (ASC), is a neurodevelopmental disorder \
 marked by restricted and repetitive patterns of behavior and deficits in reciprocal social communication. Other common signs include perseverative \
 interests, stereotypic body movements (stimming), rigid routines, hyper- or hyporeactivity to sensory input, and difficulty with social interaction \
@@ -136,26 +150,29 @@ solutions = {
     "call_friend_not": {"waste": "start_next_day", "try": "first options", "something": "first options", "else": "first options", "something else": "first options", "try something else": "first options"},
     "call_colleague_not": {"start": "first options", "start again": "first options", "code": "first options", "go": "first options"},
     "chatgpt": {"code": "start_next_day"},
-    "frustration": {"autistic": "autism", "back": "first options", "dark": "dark"},
+    "frustration": {"autistic": "autism", "not": "autism","back": "first options", "dark": "dark"},
     "dark": {"punch": "punch"},
     "autism": {"back": "frustration"},
-    "cursing": {"ok": "first options", "enough": "first options", "better": "start", "write code": "first options"},
+    "cursing": {"ok": "first options", "enough": "first options", "better": "start", "write code": "first options", "code": "first options"},
     "obsess": {"abandon": "abandon", "start": "start"},
     "abandon": {"start again": "start", "start": "start"},
     "pillow": {"code": "first options", "ok": "first options"},
     "f-word": {"write code": "first options"},
     "slap": {"write code": "first options","dark": "dark", "back": "start", "coding": "first options"},
-    "punch": {"write code": "first options", "better": "start", "calm down": "first options", "dark": "dark"},
+    "punch": {"write code": "first options", "better": "start", "calm down": "first options", "calm": "first options","dark": "dark"},
     "todo": {"back": "duck success", "todo": "todo"},
     "duck": {"rubber ducking": "rubber ducking", "next": "start", "options": "first options", "strangle": "strangle duck", "start": "start", "todo": "todo"},
     "rubber ducking": {"back": "duck"},
     "duck_explain_no": {"options": "first options", "strangle": "strangle duck", "strangle duck": "strangle duck"},
     "strangle duck": {"options": "first options", "abandon": "abandon", "dark": "dark", "donald": "duck"},
     "duck success": {"next": "start_next_day", "todo": "todo"},
-    "kitchen": {"back": "first options"},
+    "kitchen": {"back": "first options", "wc": "wc", "kitchen": "kitchen", "code": "first options"},
     "profile": {"start": "start"},
     "sucess": {"start": "start"},
-    "help": {"start": "start", "back": "first options"}
+    "wc": {"kitchen": "kitchen", "code": "first options"},
+    "help": {"start": "start", "back": "start"},
+    "slap endgame": {"sorry": "start", "amends": "first options"},
+    "endgame": {"sorry": "start", "amends": "first options"}
 }
 
 analisis ={
