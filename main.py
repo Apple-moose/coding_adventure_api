@@ -14,7 +14,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"])
 
-# Global variables to hold the game state
+# Global variables to hold the game state------------------
 current_situation = 'start'
 profile_zen = 0
 profile_angry = 0
@@ -22,7 +22,7 @@ profile_smart = 0
 profile_obsess = 0
 profile_dependent = 0
 
-# Functions from the original game
+# 'Outside' Functions--------------------------------------
 def profiling():
     global current_situation
     profiles = {'zen': profile_zen, 'angry': profile_angry, "smart": profile_smart, 'obsessed': profile_obsess, 'dependent': profile_dependent}
@@ -51,22 +51,18 @@ def obsession():
         current_situation = 'obsess'
         return {"situation": effort_noise() + "Still Nothing...Crap! continue Y / N ?§->"}
 
-
-# Define other game actions like cursing, slap, hammer, explain similarly...
+#App Hooks---------------------------------------------------
 
 @app.get("/")
 async def read_root():
         global current_situation, profile_zen, profile_angry, profile_smart, profile_obsess, profile_dependent
         current_situation = 'start'
-    #     return {"message": """*Welcome*§
-    # (type your command)§->"""}
-
         return {"message": """*Welcome to the 'A Coder's Rhapsody Game'*§§
-    A plausible situational and psychological analysis§
-    (Based on personal and shared experience)§§
-    <press a key>§$
-    Please type 'GET TO WORK' when you feel ready to start.§
-    (type 'HELP' in case you are blocked or in need of instructions)§->"""}
+                A plausible situational and psychological analysis§
+                (Based on personal and shared experience)§§
+                <press a key>§$
+                Please type 'GET TO WORK' when you feel ready to start.§
+                (type 'HELP' in case you are blocked or in need of instructions)§->"""}
 
 @app.post("/command")
 async def process_command(request: Request):
@@ -82,7 +78,6 @@ async def process_command(request: Request):
         print("smart=", profile_smart)
         print("obsess=", profile_obsess)
         print("dependent=", profile_dependent)
-
 
         return {"situation": situations[current_situation]}
 
@@ -141,7 +136,7 @@ async def process_command(request: Request):
     elif command == "chatgpt":
         current_situation = 'chatgpt'
         profile_dependent += 2
-        if dice_throw(15):
+        if dice_throw(20):
             current_situation = 'chatgpt_not'
             return {"situation": situations['chatgpt_not']}
         else:
@@ -186,7 +181,7 @@ async def process_command(request: Request):
         
     elif command == "slap":
         profile_angry += 1
-        if dice_throw(20):
+        if dice_throw(30):
             current_situation = 'slap endgame'
             return {"situation": situations['slap_intro'] + situations['slap endgame']}
         else:
@@ -223,9 +218,9 @@ async def process_command(request: Request):
             return {"situation": situations['break_intro'] + situations['after break']} 
     
     elif command == "i hate you":
-            profile_angry += 10
+            profile_angry += 5
             current_situation = 'start'
-            return {"message": "I hate you too fucking BItch!!!"}
+            return {"message": "I don't... Bitch!!!"}
     
     elif command == "profile":
         return {"situation": profiling()}
@@ -237,10 +232,10 @@ async def process_command(request: Request):
                 Now, try typing START or BACK§->"}
     
     elif command == "quit":
-        return {"message": 'Of course... just what I thought!))'}
+        return {"message": 'Of course... just what I thought!))§@'}
     
     elif command == "exit":
-        return {"message": 'Thanks and hope to see you again soon!'}
+        return {"message": 'Thanks and hope to see you again soon!§@'}
     
     else:
         return {"message": "Say Whaaaat?§->"}

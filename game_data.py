@@ -105,10 +105,10 @@ stupid wall down?§->",
 (Maybe not do that again?)§SLAP harder, explore more of your DARK side?§ ...Or come BACK to CODING?§->",
     "slap endgame": "OUch!!! §The slapping went uncontrolled and your laptop gets a big hit. §Screen of Death and broken glass, \
 you are also bleeding at the wrist. §What a mess!!! §§Seriously?? This couldn't have gone worse. \
-§You just have been labeled 'dangerous' to all synthetic life. §This mini game is booting you out as to avoid further material destruction. §Good luck with your temper issues Pal!@",
+§You just have been labeled 'dangerous' to all synthetic life. §This mini game is booting you out as to avoid further material destruction. §Good luck with your temper issues Pal!§@",
     "angry endgame": "With so much noise, someone calls the autorities on you. §You get a serious warning and find yourself in such a state of \
 anger and despair that you are rendered inoperable. §You need to CALM DOWN! Seriously. \
-§This mini game is booting you out as to avoid further material and/or psychic destruction. §Have a nice Life Buddy!@",
+§This mini game is booting you out as to avoid further material and/or psychic destruction. §Have a nice Life Buddy!§@",
     "autism": "Autism, also called autism spectrum disorder(ASD) or autism spectrum condition (ASC), is a neurodevelopmental disorder \
 marked by restricted and repetitive patterns of behavior and deficits in reciprocal social communication. Other common signs include perseverative \
 interests, stereotypic body movements (stimming), rigid routines, hyper- or hyporeactivity to sensory input, and difficulty with social interaction \
@@ -171,8 +171,8 @@ solutions = {
     "sucess": {"start": "start"},
     "wc": {"kitchen": "kitchen", "code": "first options"},
     "help": {"start": "start", "back": "start"},
-    "slap endgame": {"sorry": "start", "amends": "first options"},
-    "endgame": {"sorry": "start", "amends": "first options"}
+    # "slap endgame": {"sorry": "start", "amends": "first options"},
+    # "endgame": {"sorry": "start", "amends": "first options"}
 }
 
 analisis ={
