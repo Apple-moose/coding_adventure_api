@@ -58,16 +58,15 @@ def obsession():
 async def read_root():
         global current_situation, profile_zen, profile_angry, profile_smart, profile_obsess, profile_dependent
         current_situation = 'start'
-        return {"message": """*Welcome*§
-    (type your command)§->"""}
+    #     return {"message": """*Welcome*§
+    # (type your command)§->"""}
 
-    # return {"message": """*Welcome to the 'A Coder's Rhapsody Game'*§
-    # <.press a key.>$
-    # A plausible situational and psychological analysis§
-    # (Based on personal and shared experience)§
-    # <..>$
-    # Please type 'GET TO WORK' when you feel ready to start.§
-    # (type 'HELP' in case you are blocked or in need of instructions)$"""}
+        return {"message": """*Welcome to the 'A Coder's Rhapsody Game'*§§
+    A plausible situational and psychological analysis§
+    (Based on personal and shared experience)§§
+    <press a key>§$
+    Please type 'GET TO WORK' when you feel ready to start.§
+    (type 'HELP' in case you are blocked or in need of instructions)§->"""}
 
 @app.post("/command")
 async def process_command(request: Request):
@@ -222,6 +221,11 @@ async def process_command(request: Request):
             profile_zen += 2
             current_situation = 'kitchen'
             return {"situation": situations['break_intro'] + situations['after break']} 
+    
+    elif command == "i hate you":
+            profile_angry += 10
+            current_situation = 'start'
+            return {"message": "I hate you too fucking BItch!!!"}
     
     elif command == "profile":
         return {"situation": profiling()}
