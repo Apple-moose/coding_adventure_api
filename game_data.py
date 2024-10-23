@@ -93,7 +93,7 @@ reflects your normal 'OK' face again, you come back to your post, take a deep br
     "cursing": "You breathe in all the air your lungs can admit and let out a magnificent angry FUUUUUUUUUUUU@#% !!!<key>$§WAouuuuuh that felt good! §Sometimes, cursing is all you've got...§\
 For now, you're 'OK' (are you? Let us know if you had ENOUGH?) §Also, you can't shake the feeling that \
 you might have been noticed by someone else, and that, makes you want to curse even more. §Will you risk another very loud 'FUUU' ??§->",
-    "cursing_success": "   !!! FU%**😤§§   FU*^&#**#🤬§§   FUuuuuUUUU*%*@*#^#%🤯   !!!§§Double down with FUUU or feel BETTER now?§->",
+    "cursing_success": "   !!! FU%**😤§§   FU*^&#**#🤬§§   FUuuuuUUUU*%#*#^#%🤯   !!!§§Double down with FUUU or feel BETTER now?§->",
     "punch": "You turn to that ugly wall next to the desk and hit it with your right fist. §AOUCH!... §Damn, \
 you have hit precisely where the supporting beam was! §Your hand hurts a little and the wall is somehow mocking you. \
 §What is this unfortunate experience teaching you? §That you need to 'CALM DOWN'? §...or go the toolbox, get the HAMMER and bring that \
