@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: coding_game
+    runtime: python
+    repo: https://github.com/Apple-moose/coding_adventure_api.git
+    region: frankfurt
+    plan: free
+    branch: game
+    buildCommand: pipenv install
+    startCommand: pipenv run uvicorn main:app --reload
