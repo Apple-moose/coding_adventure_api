@@ -232,7 +232,7 @@ async def process_command(request: Request):
                 Now, try typing START or BACK§->"}
     
     elif command == "quit":
-        return {"message": 'Of course... just what I thought!))§@'}
+        return {"message": 'Of course...adios!§@'}
     
     elif command == "exit":
         return {"message": 'Thanks and hope to see you again soon!§@'}

@@ -2,7 +2,8 @@ situations = {
     "start": "So, here you are again, laptop in hands. You start to WRITE CODE§->",
     "start_next_day": "§§The next day...§$So, here you are again, laptop in hands. You start to WRITE CODE§->",
     "first options": "You gather your focus and put your mind at work with confidence. §Right away, your flow gets interrrupted by this damn 'meanError' again§\
-...What would you do? §Turn to GOOGLE (STACK overflow, or CHATGPT?), talk to the DUCK or walk to the KITCHEN? §(you can always ask a senior COLLEAGUE for a quick fix)§->",
+...What do you do? §STUDY all your notes from school, open your browser and GOOGLE the issue, check STACK overflow, query CHATGPT?§ Or maybe get your eyes off the screen and start talking to the DUCK\
+, move to the KITCHEN? §Also, how about asking a senior COLLEAGUE for a quick fix?§->",
  #STACK-----------------------------  
     "stack overflow": "You end up scrolling again on Stack Overflow, your most trusted friend on the web. §There are tons of solutions \
 exposed on many pages but, at first glance, it's all gibberish, nothing seems applicable...§At this point, be honest: you start building internal FRUSTRATION §or \
@@ -29,20 +30,20 @@ Ah yeah! Donald... §try to EXPLAIN your code again line by line, §reconsider y
  #KITCHEN----------------   
     "kitchen": "Let's get some air in the lungs and refill your energy levels. §What's the rush anyways? §You walk \
 to the kitchen slowly, thinking about what you will find there...§You take the opportunity to drink a bit of water. \
-Your eyes catch a glimmer coming from a box on the counter with a big 'Merci' written on it... §Steal some CHOCOLATE or \
+Your eyes catch a glimmer coming from a box on the counter with a big 'Merci' written on it... §Eat a bite of CHOCOLATE or \
 BACK to work?§->",
     "chocolate_intro": "the chocolate <enter>s your watering mouth$§'Mmmmmh, Delicious!",
-    "tea": "§You wipe away all traces of chocolate from the corners of your smile and notice the water boiler. §Now, how about preparing \
+    "tea": "§You wipe away all traces of chocolate from the corners of your smile and notice that the kettle was already filled and plugged in. §Now, how about preparing \
 yourself a nice cup of TEA? §Maybe eat another piece of CHOCOLATE? §..or BACK to work for some reason...???§->",
-    "tea_intro": "You press <key> on the water boiler...$§",
+    "tea_intro": "You press <key> on the kettle...$§",
     "sandwich": "Waiting for the water to boil, you prepare your cup and check the fridge for some cream while you \
 are planning your next move: §going BACK to work...   §Also, you can't help but notice all the necessary ingredients to make yourself \
-your favorite SANDWICH. §Again: 'What's the rush, right? Very tempting. It would sure take your belly out of the equation in your next coding session...§->",
+your favorite SANDWICH. §Again: 'What's the rush, right? Very tempting. It would surely take your belly out of the equation in your next coding session...§->",
     "sandwich_intro": "You insert all those wonderful ingredients between integral slices of bread...<key>$§Best Sandwich Ever!§",
     "break": "§There it is: true pleasure. A Happy brain in a Happy body. What more? §Well, how about a little BREAK for \
 digestion purposes? §(or BACK to work.... Really??)§->",
-    "break_intro": "Press <key> to pause and check the news on your phone...$§La la lah...ouh! What's up with that?...§",
-    "after break": "§Ouh! Time passes so fast when your checking for new shoes on amazon!§§Fine, let's go BACK to coding, \
+    "break_intro": "Press <key> to pause and check the news on your phone...$§La la laaa...Hey, what's up with that?...§",
+    "after break": "§Oh! Time passes so fast when your checking for new shoes on amazon!§§Fine, let's go BACK to coding, \
 but not before you pass by the W.C., check your hair and your teeth in the mirror, put on a warm shirt, make yourself \
 another TEA, and/or grab some more CHOCOLATE...§->",
     "wc": "Right!§Of course you had to type 'wc'!§Very, very thorough. And that makes you...Very human or are you another AI?§\
@@ -69,13 +70,12 @@ Well then, are you going to WASTE the whole day waiting?§...or give TRY SOMETHI
     "chatgpt": "(Press <key> and may the omnipotent A.I. one day rule the World!)$§\
 After a couple of tweeking in the prompt, the Truth appears before your eyes: §Pure Code§ Perfect: \
 devoid of unuseful console loggings, full of //#Comments and generic variable names. §The code is undoubtedly clean and, once pasted, runs smooth like butter. \
-§Honestly, what kind of person would disrupt that super-natural flow of artificial beings helping each other so efficiently? \
 §Smart move. Just don't tell anyone what you've done and earn yourself some time to spend on more entertaining stuff! \
-§Life is not that hard right? §Will you ever CODE again, §QUIT this nonsensical absurdity of a mini game, §or check updates \
+§Life doesn't have to be that hard right? §So, will you ever CODE again, §QUIT this nonsensical absurdity of a mini game, §or check updates \
 on your coder's PROFILE?§->",
     "chatgpt_not": "(Press <key> and may the omnipotent A.I. one day rule the World!)$§\
 Oops, weird answer. Let's formulate that query more adequately$§Nope! Doesn't work!§The pasted code creates more \
-issues than it solves.§That's it! Congrats! You have reached 'Chat's' endpoint...§§Press <key> with the full weight of what that would mean for humanity...$\
+issues than it solves.§Is that it? Have you reached 'Chat's' endpoint?§§Press <key> with the full weight of what that would mean for humanity...$\
 §You feel incredible for 5 seconds, then you realize how much this failure just underscores your inability to expose your coding issues to a more efficient being.§\
 And, by the way, that 'meanError' hasn't been solved yet!§\
 §How about something more tangible? A coder FRIEND or COLLEAGUE?§A rubber DUCK or a search on GOOGLE?§\
@@ -114,7 +114,7 @@ marked by restricted and repetitive patterns of behavior and deficits in recipro
 interests, stereotypic body movements (stimming), rigid routines, hyper- or hyporeactivity to sensory input, and difficulty with social interaction \
 and verbal and nonverbal communication. §(type 'BACK' exactly, without any mistake or I will not understand!)§->",
  #STUDY-----------------------------------------   
-    "study": "Zen as a bonsai, you turn to research mode and try not to deviate from the path too much.§Time passes...$\
+    "study": "Zen as a bonsai, you turn to research mode, grab your notes and try not to deviate from the path too much.§Time passes...$\
 more time passes...§$Although you feel like you are getting smarter by the minute, §dinner time approaches \
 and you are still nowhere close to resolving your coding issues...§\
 You take a couple of minutes to ponder your options: §you can always let it go and SLEEP on it, \
@@ -166,13 +166,11 @@ solutions = {
     "duck_explain_no": {"options": "first options", "strangle": "strangle duck", "strangle duck": "strangle duck"},
     "strangle duck": {"options": "first options", "abandon": "abandon", "dark": "dark", "donald": "duck"},
     "duck success": {"next": "start_next_day", "todo": "todo"},
-    "kitchen": {"back": "first options", "wc": "wc", "kitchen": "kitchen", "code": "first options"},
+    "kitchen": {"back": "first options", "wc": "wc", "w.c.": "wc", "kitchen": "kitchen", "code": "first options"},
     "profile": {"start": "start"},
     "sucess": {"start": "start"},
     "wc": {"kitchen": "kitchen", "code": "first options"},
     "help": {"start": "start", "back": "start"},
-    # "slap endgame": {"sorry": "start", "amends": "first options"},
-    # "endgame": {"sorry": "start", "amends": "first options"}
 }
 
 analisis ={
@@ -192,6 +190,6 @@ rearview mirror.§§EXIT or START again?§->",
 and after a while, so does everyone around you. §Not sure you can keep this up for long. How about tomorrow? \
 §It kind of begs the question: §Wouldn't it be more productive to take a breather sometimes?§§EXIT or START again?§->",
     "dependent": "Asking for help is fine and respecting deadlines is fundamental. Good point. §Hopefully, you are aware that \
-abusing the people around you is not a viable carreer plan. §Are people starting to avoid your calls or talk behind your back? \
-Or is your best friend an A.I.? Also, how's your coding going? Any notable progress lately?§§EXIT or START again?§->",
+abusing the people around you is not a viable carreer plan. §Is your best friend an A.I.?§Are people starting to avoid your calls or talk behind your back?§ \
+ Also, how's your coding going? Any notable progress lately?§§EXIT or START again?§->",
 }
