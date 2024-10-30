@@ -416,7 +416,7 @@ async def process_command(request: Request):
         current_situation = 'help'
         return {"situation": "Try pressing the uppercase keywords in the text. (work, code, duck, fridge, stack overflow...) §\
                 'exit' to end the game or 'profile' to see updates on your coder's profile!§\
-                Now, try typing pressing [START] or [BACK]."}
+                Now, try pressing [START] or [BACK]."}
     
     elif command == "quit":
         return {"message": 'You quit... Of course§@'}
