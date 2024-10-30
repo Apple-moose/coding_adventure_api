@@ -397,7 +397,7 @@ async def process_command(request: Request):
     elif command == "tea":
             profile_zen += 1
             current_situation = 'kitchen'
-            return {"situation": situations['tea_intro'] + situations['sandwich']}
+            return {"situation": mobile_situations['tea_intro'] + mobile_situations['sandwich']}
     
     elif command == "sandwich":
             profile_zen += 2
