@@ -1,17 +1,17 @@
-# Dockerfile
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+# Use official Python image as a base
+FROM python:3.9-slim
 
-COPY ./app /app
-
-# Expose the port (optional, as it's already done in the base image)
-EXPOSE 80
-
-# Set the working directory
+# Set working directory in the container
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt ./
+# Copy your FastAPI application into the container
+COPY . /app
+
+# Install dependencies (make sure you have a requirements.txt)
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Command to run the app
-CMD ["uvicorn", "your_module:app", "--host", "0.0.0.0", "--port", "80"]
+# Expose the port the app will run on
+EXPOSE 7500
+
+# Command to run the app using uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7500", "--reload"]
