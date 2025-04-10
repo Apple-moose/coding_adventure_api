@@ -1,4 +1,10 @@
 situations = {
+    "instructions": """You are currently playing a text adventure game with multiple possible endings.§\
+                Choices you make will sometimes trigger 'dice rolls' that end up in success or failure.§\
+                Meanwhile, the game punctuates your every moves and writes a coder 'profile' in the background.§\
+                Explore your options by typing the uppercase keywords in the text (as: WORK, CODE, DUCK, FRIDGE, PROFILE....).§§\
+                Get it? Jump right in by typing START.§\
+                No time for this? Type EXIT or QUIT§->""",
     "start": "So, here you are again, laptop in hands. You start to WRITE CODE.§->",
     "start_next_day": "§§The next day ...§$So, here you are again, laptop in hands. You start to WRITE CODE.§->",
     "first options": "You gather your focus and put your mind to work with confidence. §Right away, your flow gets interrrupted by this damn 'meanError' again.§\
@@ -46,8 +52,8 @@ digestion purposes? §(Or BACK to work ... Really??)§->",
     "after break": "§Oh! Time passes so fast when you're looking for new shoes on amazon!§§Fine, let's go BACK to coding, \
 but not before you pass by the WC, check your hair and your teeth in the mirror, put on a warm shirt, make yourself \
 another TEA, and/or grab some more CHOCOLATE ...§->",
-    "wc": "Right!§Of course you had to type 'WC'!§Very, very thorough. And that makes you ... very human or just another AI?§\
-Interesting ... I should have asked you first!§ Alright, whatever. Back to the KITCHEN or to your CODE issues?§->",
+    "wc": "Right!§Of course you had to type 'WC'!§Very, very thorough ... like a bot! Too bad I do not have a 'verify if you are human' in my program.\
+§ Alright, whatever. Back to the KITCHEN or to your CODE issues?§->",
  #FRIEND---COLLEAGUE-------------------------   
     "call_colleague": "Your self esteem takes a hit as you push through the: §'Pffffff', 'yeah, yeah' and 'I'm too busy right now'...§ \
 Anyways, you end up pushing your problematic code and, later, you receive that much needed gitHub get request from a more advanced coder colleague.§ \
@@ -141,7 +147,8 @@ formulating solutions smiling from one ear to the other. §Your refreshed self i
 }
  
 solutions = {
-    "start": {"write code": "first options", "code": "first options", "write": "first options"},
+    "instructions": {"start": "start"},
+    "start": {"write code": "first options", "code": "first options", "write": "first options", "why": "instructions", "goal": "instructions"},
     "start_next_day": {"write code": "first options", "code": "first options", "write": "first options"},
     "first options": {"google": "stack overflow", "stack overflow": "stack overflow", "stack": "stack overflow", "duck": "duck", "kitchen": "kitchen"},
     "stack overflow": {"frustration": "frustration", "investigate": "study", "study": "study"},
@@ -243,8 +250,8 @@ digestion purposes? §(Or [BACK] to work ... Really??)",
     "after break": "§Oh! Time passes so fast when you're looking for new shoes on amazon!§§Fine, let's go [BACK] to coding, \
 but not before you pass by the [WC], check your hair and your teeth in the mirror, put on a warm shirt, make yourself \
 another [TEA], grab some more [CHOCOLATE] or first check on your coedr [PROFILE]?",
-    "wc": "Right!§Of course you had to touch 'WC'!§Very, very thorough. And that makes you ... very human or just another AI?§\
-Interesting, I should have asked you first!§ Alright, whatever. Back to the [KITCHEN] or to your [CODE] issues?",
+    "wc": "Right!§Of course you had to touch 'WC'!§Very, very thorough ... like a bot! Too bad I do not have a 'verify if you are human' in my program.\
+§ Alright, whatever. Back to the [KITCHEN] or to your [CODE] issues?",
  #FRIEND---COLLEAGUE-------------------------   
     "call_colleague": "Your self esteem takes a hit as you push through the: §'Pffffff', 'yeah, yeah' and 'I'm too busy right now'...§ \
 Anyways, you end up pushing your problematic code and, later, you receive that much needed gitHub get request from a more advanced coder colleague.§ \

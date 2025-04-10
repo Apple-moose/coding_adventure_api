@@ -56,11 +56,13 @@ async def read_root():
         global current_situation, profile_zen, profile_angry, profile_smart, profile_obsess, profile_dependent
         current_situation = 'start'
         return {"message": """*Welcome to the 'A Coder's Rhapsody Game'*§§
-                A plausible situational and psychological analysis§
+                A plausible situational and psychological profiling exercise§
                 (Based on personal and shared experience)§§
-                <press a key>§$
-                Please type 'GET TO WORK' when you feel ready to start.§
-                (type 'HELP' in case you are blocked or in need of instructions)§->"""}
+                <press any key>§$
+                First timers: please type 'GOAL' or 'WHY' to know what you are getting into.§
+                Type 'HELP' in case you are blocked or in need of instructions.§§
+                Type 'GET TO WORK' if you feel ready to start.§->"""}
+
 
 @app.post("/command")
 async def process_command(request: Request):
@@ -228,7 +230,7 @@ async def process_command(request: Request):
     elif command == "help":
         current_situation = 'help'
         return {"message": "Try typing the uppercase keywords in the text. (work, code, duck, fridge, stack overflow...) §\
-                'exit' to end the game or 'profile' to see updates on your coder's profile!§\
+                At any time: 'EXIT' or 'QUIT' to end the game and 'PROFILE' to see updates on your coder's profile!§\
                 Now, try typing START or BACK§->"}
     
     elif command == "quit":
@@ -248,11 +250,12 @@ async def read_root():
         global current_situation, profile_zen, profile_angry, profile_smart, profile_obsess, profile_dependent
         current_situation = 'start'
         return {"message": """*Welcome to the 'A Coder's Rhapsody Game'*§§
-                A plausible situational and psychological analysis§
+                A plausible situational and psychological profiling exercise§
                 (Based on personal and shared experience)§§
                 <touch screen>§$
-                Please touch '[GET TO WORK]' when you feel ready to start.§
-                (Touch '[HELP]' in case you are blocked or in need of instructions)"""}
+                First timers: please touch [HERE] to know what you are getting into.§§
+                Touch [GET TO WORK] when you are ready to start."""}
+
 
 @app.post("/mobile/command")
 async def process_command(request: Request):
@@ -412,11 +415,14 @@ async def process_command(request: Request):
     elif command == "profile":
         return {"situation": mobile_profiling()}
     
-    elif command == "help":
+    elif command == "here":
         current_situation = 'help'
-        return {"situation": "Try pressing the uppercase keywords in the text. (work, code, duck, fridge, stack overflow...) §\
-                'exit' to end the game or 'profile' to see updates on your coder's profile!§\
-                Now, try pressing [START] or [BACK]."}
+        return {"situation": "You are currently playing a text adventure game with multiple possible endings.§\
+                Choices you make will sometimes trigger 'dice rolls' that end up in success or failure.§\
+                Meanwhile, the game punctuates your every moves and writes a coder 'profile' in the background.§\
+                Explore your options by pressing the uppercase keywords in the text. (WORK, CODE, DUCK, FRIDGE, PROFILE....)§§\
+                Get it? Jump right in by pressing this word -> [START].§\
+                No time for this? Touch -> [EXIT]."}
     
     elif command == "quit":
         return {"message": 'You quit... Of course§@'}
@@ -425,7 +431,7 @@ async def process_command(request: Request):
         return {"message": 'Thanks and hope to see you again soon!§@'}
     
     else:
-        return {"message": "§Say Whaaaat?"}
+        return {"message": "§Ouh! Something went terribly wrong. [START] again or [EXIT]?§"}
 
 # Run the app with Uvicorn
 if __name__ == "__main__":
